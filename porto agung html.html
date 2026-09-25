@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agung Kurniansyah - Portofolio Profesional</title>
+    <!-- Google Fonts & FontAwesome untuk ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        
+        /* Navbar */
+        nav { background: var(--white); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav ul li a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: var(--transition); }
+        nav ul li a:hover { color: var(--accent); }
+
+        /* Header / Hero */
+        header { padding: 8rem 5% 4rem; background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .hero-text { flex: 1; min-width: 300px; }
+        .hero-text h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .hero-text p { font-size: 1.1rem; color: #64748b; margin-bottom: 1.5rem; }
+        .btn { display: inline-block; background: var(--accent); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: var(--transition); }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .hero-img { flex: 1; text-align: center; min-width: 280px; }
+        .hero-img img { width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 4px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+        /* Sections */
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        h2.section-title { font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center; position: relative; }
+        h2.section-title::after { content: ''; width: 50px; height: 3px; background: var(--accent); display: block; margin: 0.5rem auto 0; border-radius: 2px; }
+
+        /* About & Skills Grid */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: var(--transition); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .card ul { list-style-position: inside; color: #64748b; }
+        .card ul li { margin-bottom: 0.5rem; }
+
+        /* Projects */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .project-content { padding: 1.5rem; }
+        .project-content h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        .project-content p { color: #64748b; font-size: 0.95rem; margin-bottom: 1rem; }
+        .tag { display: inline-block; background: #e2e8f0; color: #475569; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+
+        /* Contact Section */
+        .contact-box { background: var(--primary); color: var(--white); text-align: center; border-radius: 15px; padding: 3rem 2rem; }
+        .contact-box h2 { color: var(--white); }
+        .contact-box p { color: #94a3b8; margin-bottom: 1.5rem; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; font-size: 1.5rem; margin-top: 1rem; }
+        .social-links a { color: var(--white); transition: var(--transition); }
+        .social-links a:hover { color: var(--accent); }
+
+        /* Footer */
+        footer { text-align: center; padding: 2rem; background: #020617; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Agung Kurniansyah</div>
+        <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-text">
+            <h1>Agung Kurniansyah</h1>
+            <p>Chemical/Industrial Engineer, Technical Support Expert, & Visual Design Creator[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span). Menghubungkan presisi sains dengan efisiensi operasional dan estetika kreatif.</p>
+            <a href="#contact" class="btn">Hubungi Saya</a>
+        </div>
+        <div class="hero-img">
+            <!-- Placeholder atau ganti dengan link gambar profil Anda -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Agung Kurniansyah">
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="card">
+            <p>Profesional berpengalaman dengan latar belakang Teknik Industri & Analis Kimia, serta rekam jejak kuat di industri farmasi, analisis laboratorium R&D, manajemen rantai pasok, konstruksi, hingga <em>Technical Support Engineering</em>[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span). Memiliki kemampuan adaptasi tinggi serta komitmen penuh terhadap efisiensi dan kualitas kerja.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Keahlian Utama</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3><i class="fa-solid fa-flask" style="color: var(--accent);"></i> Laboratorium & Farmasi</h3>
+                <ul>
+                    <li>Pengujian Analitik & Validasi Metode</li>
+                    <li>Pemeliharaan Instrumen (HPLC, GC, UV-Vis)</li>
+                    <li>Kepatuhan Standar CPOB, GLP, & ISO 17025</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-gears" style="color: var(--accent);"></i> Teknik & Operasional</h3>
+                <ul>
+                    <li>Technical Service & Troubleshooting</li>
+                    <li>Manajemen Proyek & Konstruksi</li>
+                    <li>Supply Chain, Procurement, & QCC/SS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Portofolio Proyek</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Perumahan Taman Bukit Alam</h3>
+                    <p>Perancangan desain eksterior gerbang utama (main gate) kompleks perumahan dengan gaya Modern Contemporary di Samarang, Garut[span_4](start_span)[span_4](end_span).</p>
+                    <span class="tag">SketchUp</span>
+                    <span class="tag">AutoCAD</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Mr. Z's Private Residence</h3>
+                    <p>Perencanaan konstruksi interior dan eksterior rumah tinggal 2 lantai bergaya Modern Classic lengkap dengan denah 2D dan visualisasi 3D[span_5](start_span)[span_5](end_span).</p>
+                    <span class="tag">Design Planner</span>
+                    <span class="tag">Field Supervision</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Nature Sip Cold Pressed Juice</h3>
+                    <p>Pembuatan poster digital, konsep visual, dan materi pemasaran produk kesehatan dengan fokus menonjolkan klaim 100% fresh[span_6](start_span)[span_6](end_span).</p>
+                    <span class="tag">Branding</span>
+                    <span class="tag">Graphic Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-box">
+            <h2>Mari Berkolaborasi!</h2>
+            <p>Tertarik untuk bekerja sama atau mendiskusikan peluang profesional? Silakan hubungi saya melalui kontak di bawah ini.</p>
+            <p><i class="fa-solid fa-envelope"></i> agungkurniansyah39@gmail.com | <i class="fa-solid fa-phone"></i> 0851-2365-7385[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/agungkurniansyah39/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:agungkurniansyah39@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Agung Kurniansyah. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
